@@ -17,7 +17,10 @@ def get_name_and_age(person_id):
 
 
 if __name__ == "__main__":
-    person = get_name_and_age(112)
-    print(
-        f"Name: {person['name']}, Age: {person['age']}"
-    )
+    try:
+        person = get_name_and_age(112)
+        print(
+            f"Name: {person['name']}, Age: {person['age']}"
+        )
+    except KeyError:
+        print("Not a good user ID")
