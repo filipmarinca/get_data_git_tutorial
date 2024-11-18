@@ -1,4 +1,5 @@
 """Get person data"""
+import pandas as pd
 
 DATA = {
     111: {
@@ -25,6 +26,11 @@ def read_data(file):
     with open(file, "r") as fr:
         content = fr.readlines()
     return content
+
+def read_csv_data(file) -> pd.DataFrame:
+    """Return a list with all rows from file"""
+    return pd.read_csv(file)
+
 
 if __name__ == "__main__":
     try:
