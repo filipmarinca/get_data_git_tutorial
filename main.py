@@ -8,3 +8,5 @@ try:
     )
 except KeyError:
     print("Not a good user ID")
+
+print("Hey")
